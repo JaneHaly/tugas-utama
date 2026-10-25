@@ -1,0 +1,638 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #faf7f2;
+    color: #263548;
+}
+
+html.scroll-terkunci,
+body.scroll-terkunci {
+    overflow: hidden;
+}
+
+.awal {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 15px 30px;
+    box-sizing: border-box;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.70)
+        ),
+        url("narutohinata2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+.awal {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.awal > img {
+    position: relative;
+    z-index: 1;
+}
+
+.awal > p,
+.awal > h1,
+.awal > button {
+    position: relative;
+    z-index: 1;
+}
+
+.dekorasi-awal {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.dekorasi-awal img {
+    position: absolute;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.bunga-statis {
+    top: -15px;
+    width: 300px;
+    opacity: 0.95;
+}
+
+.bunga-statis.kiri {
+    left: -20px;
+}
+
+.bunga-statis.kanan {
+    right: -20px;
+    transform: scaleX(-1);
+}
+
+.bunga-gerak {
+    width: 38px;
+    opacity: 0.9;
+    animation: bungaBerputar 9s linear infinite;
+}
+
+.bunga-gerak-1 {
+    top: 24%;
+    left: 24%;
+    animation-duration: 10s;
+}
+
+.bunga-gerak-2 {
+    top: 18%;
+    right: 25%;
+    animation-duration: 13s;
+    animation-delay: -3s;
+}
+
+.bunga-gerak-3 {
+    top: 48%;
+    left: 12%;
+    animation-duration: 8s;
+    animation-delay: -5s;
+}
+
+.bunga-gerak-4 {
+    top: 52%;
+    right: 12%;
+    animation-duration: 11s;
+    animation-delay: -2s;
+}
+
+.bunga-gerak-5 {
+    top: 78%;
+    left: 29%;
+    animation-duration: 12s;
+    animation-delay: -7s;
+}
+
+.bunga-gerak-6 {
+    top: 80%;
+    right: 28%;
+    animation-duration: 9s;
+    animation-delay: -4s;
+}
+
+@keyframes bungaBerputar {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(15px, 20px) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(-10px, 35px) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(-20px, 10px) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+.awan {
+    width: 75px;
+    opacity: 0.85;
+    animation: awanGerak 8s ease-in-out infinite alternate;
+}
+
+.awan-1 {
+    top: 20%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.awan-2 {
+    top: 32%;
+    right: 9%;
+    animation-delay: -2s;
+}
+
+.awan-3 {
+    top: 65%;
+    left: 6%;
+    animation-delay: -4s;
+}
+
+.awan-4 {
+    top: 70%;
+    right: 7%;
+    animation-delay: -1s;
+}
+
+@keyframes awanGerak {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -20px);
+    }
+
+    100% {
+        transform: translate(-20px, 25px);
+    }
+}
+
+
+.awal p:first-of-type {
+    font-size: 15px;
+    letter-spacing: 4px;
+    color: #d6b36a;
+}
+
+.awal > img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #cba354;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.awal h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 72px;
+    font-weight: normal;
+    color: white;
+    margin: 10px 0;
+}
+
+.awal p:last-of-type {
+    margin-top: 20px;
+    font-size: 19px;
+    color: white;
+}
+
+.tombol-buka {
+    margin-top: 20px;
+    padding: 14px 35px;
+    background-color: #cba354;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tombol-buka:hover {
+    background-color: #ae873c;
+    transform: translateY(-2px);
+}
+
+.surat {
+    padding: 80px 6%;
+    text-align: center;
+    background-color: #faf7f2;
+    box-sizing: border-box;
+}
+
+.isi-surat {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.isi-surat p {
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #687586;
+}
+
+.isi-surat h4 {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #263548;
+}
+
+.mempelai h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 45px;
+}
+
+.daftar-mempelai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.kotak-mempelai {
+    flex: 1;
+    max-width: 500px;
+    min-width: 0;
+    padding: 25px 20px;
+    background-color: white;
+    border: 1px solid #eee5d6;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+.kotak-mempelai img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid #cba354;
+    object-fit: cover;
+}
+
+.kotak-mempelai h2 {
+    font-size: 27px;
+    font-weight: normal;
+    margin: 18px 0 5px;
+}
+
+.kotak-mempelai p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #687586;
+    margin-bottom: 0;
+}
+
+.tengah-pasangan h2 {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: normal;
+    color: #cba354;
+    margin: 0;
+}
+
+.acara{
+    background-color: #f4eadc;
+    padding: 70px 20px 50px;
+    text-align: center;
+}
+
+.judul-acara h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.garis-emas {
+    width: 85px;
+    height: 2px;
+    background-color: #cba354;
+    margin: 0 auto 50px;
+}
+
+.kotak-acara {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 18px;
+    height: 100%;
+}
+
+.ikon-acara {
+    font-size: 40px;
+    color: #cba354;
+    margin-bottom: 20px;
+}
+
+.kotak-acara h3 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.kotak-acara p {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.kotak-acara hr {
+    margin: 30px 0 20px;
+    border-color: #cccccc;
+}
+
+.kotak-acara h4 {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.kotak-acara p:last-child {
+    color: #687586;
+}
+
+.tombol-maps {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 30px;
+    background-color: #cba354;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.tombol-maps:hover {
+    background-color: #ae873c;
+    color: white;
+}
+
+
+.galeri-section {
+    background-color: #f4eadc;
+    color: #263548;
+}
+
+.galeri-section .container {
+    max-width: 900px;
+}
+
+.judul-galeri {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #263548;
+    margin-bottom: 5px;
+}
+
+.deskripsi-galeri {
+    color: #687586;
+    font-size: 13px;
+}
+
+.galeri-card {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border: 1px solid #cba354;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.galeri-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeri-card:hover img {
+    transform: scale(1.03);
+}
+
+
+.rsvp-section {
+    background-color: white;
+    padding: 45px 20px 40px;
+    text-align: center;
+}
+
+.judul-rsvp h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.judul-rsvp p {
+    color: #687586;
+    font-size: 13px;
+}
+
+.judul-rsvp .garis-emas {
+    margin-bottom: 25px;
+}
+
+.form-rsvp {
+    max-width: 550px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #eee5d6;
+    border-radius: 14px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.form-rsvp label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0 0 7px;
+}
+
+.form-rsvp input,
+.form-rsvp select,
+.form-rsvp textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #d9dee3;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-rsvp input:focus,
+.form-rsvp select:focus,
+.form-rsvp textarea:focus {
+    outline: none;
+    border-color: #cba354;
+}
+
+.form-rsvp button {
+    width: 100%;
+    padding: 12px;
+    background-color: #cba354;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-rsvp button:hover {
+    background-color: #ae873c;
+}
+
+.daftar-rsvp {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.daftar-rsvp h3 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.item-rsvp {
+    padding: 14px;
+    margin-bottom: 12px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+.header-rsvp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.header-rsvp strong {
+    font-size: 14px;
+}
+
+.status-rsvp {
+    padding: 3px 9px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.status-hadir {
+    background-color: #198754;
+}
+
+.status-tidak-hadir {
+    background-color: #dc3545;
+}
+
+.detail-jumlah {
+    margin: 8px 0 3px;
+    font-size: 12px;
+    color: #687586;
+}
+
+.ucapan-rsvp {
+    margin: 0;
+    color: #687586;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-undangan {
+    padding: 22px 15px;
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    
+}
+
+.footer-undangan h2 {
+    font-size: 34px;
+    font-style: italic;
+    margin-bottom: 5px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.footer-undangan p {
+    color: #c7c7c7;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.form-rsvp input,
+.form-rsvp select,
+.form-rsvp textarea {
+    background-color: #ffffff !important;
+    color: #263548 !important;
+    border: 1px solid #d9dee3;
+}
+
+.form-rsvp input::placeholder,
+.form-rsvp textarea::placeholder {
+    color: #888888;
+    opacity: 1;
+}
+
+.form-rsvp select option {
+    background-color: #ffffff;
+    color: #263548;
+}
+
+.form-rsvp input:focus,
+.form-rsvp select:focus,
+.form-rsvp textarea:focus {
+    background-color: #ffffff !important;
+    color: #263548 !important;
+    border-color: #cba354;
+    outline: none;
+    box-shadow: 0 0 0 0.15rem rgba(203, 163, 84, 0.2);
+}
+
